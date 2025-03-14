@@ -133,6 +133,7 @@ body {
   }
   .formularioViajes{
     padding-top: 100px;
+    padding-bottom: 10% ;
     margin-top: 3%;
     display: flex;
     justify-content: center;
@@ -207,3 +208,12 @@ body {
     background-color: #6769a4;
     color: white;
   }
+  .footer{
+    background-color: #6769a4;
+    color: white;
+    margin: auto;
+    padding: 2px;
+    text-align: center;
+  }
+  
+ 

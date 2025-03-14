@@ -44,7 +44,6 @@ function mostrarPesoEquipajeFormulario(){
 
 
 function funcionMostrarModalCotizacionVuelo(){
-    const botonCerrarModal = document.querySelector("#botonCerrarModal");
     let ciudadOrigen=selecionOrigen.value;
     let ciudadDestino = selecionDestino.value;
     let cantidadViajeros = cantiadPasajeros.value;
@@ -53,6 +52,7 @@ function funcionMostrarModalCotizacionVuelo(){
     let precioVuelo =0;
     let precioMaletas=0;
     let precioAsiento=0;
+   
 
     //Traer el radio clikeado
     rdoSelecionAsiento.forEach(asientoClikeado => {
@@ -62,12 +62,14 @@ function funcionMostrarModalCotizacionVuelo(){
     });
   
     if(cantidadViajeros<0 || cantidadViajeros>50){
-    setTimeout(()=>{
-         botonCerrarModal.click();
+        cantidadViajeros =50;
+       
+        
+        
 
-    },100)
-    
     }
+    
+    
     //calcualr precio vuelo
     if (ciudadDestino=="Medellin"){
         precioVuelo=80000*cantidadViajeros;
@@ -120,6 +122,76 @@ function funcionMostrarModalCotizacionVuelo(){
      `;
 };
 
+
+
+function funcionNoElegirMismaCiudad(){
+    let otpPereira = document.querySelector("#Pereira");
+    let otpBucaramanga = document.querySelector("#Bucaramanga");
+    let otpMedellin = document.querySelector("#Medellin");
+    let otpCartagena = document.querySelector("#Cartagena");
+    let otpSanAndres = document.querySelector("#SanAndres");
+
+    if(selecionOrigen.value=="Pereira"){
+        otpPereira.setAttribute('disabled','true');
+    }
+    else{
+
+        otpBucaramanga.removeAttribute('disabled')
+        otpMedellin.removeAttribute('disabled')
+        otpCartagena.removeAttribute('disabled')
+        otpSanAndres.removeAttribute('disabled')
+    }
+
+
+
+    
+     if(selecionOrigen.value=="Bucaramanga"){
+        otpBucaramanga.setAttribute('disabled','true');
+    }
+    else{
+        otpPereira.removeAttribute('disabled')
+        otpMedellin.removeAttribute('disabled')
+        otpCartagena.removeAttribute('disabled')
+        otpSanAndres.removeAttribute('disabled')
+    }
+    if(selecionOrigen.value=="Medellin"){
+        otpMedellin.setAttribute('disabled','true');
+    }
+    else{
+        otpPereira.removeAttribute('disabled')
+        otpBucaramanga.removeAttribute('disabled')
+        otpCartagena.removeAttribute('disabled')
+        otpSanAndres.removeAttribute('disabled')
+
+    }
+
+    if(selecionOrigen.value=="Cartagena"){
+        otpCartagena.setAttribute('disabled','true');
+    }
+    else{
+        otpPereira.removeAttribute('disabled')
+        otpBucaramanga.removeAttribute('disabled')
+        otpMedellin.removeAttribute('disabled')
+        otpSanAndres.removeAttribute('disabled')
+
+    }
+    if(selecionOrigen.value=="SanAndres"){
+        otpSanAndres.setAttribute('disabled','true');
+    }
+    else{
+        otpPereira.removeAttribute('disabled');
+        otpBucaramanga.removeAttribute('disabled');
+        otpMedellin.removeAttribute('disabled');
+        otpCartagena.removeAttribute('disabled');
+    }
+   
+    
+
+
+}
+
+
+
 inputPesoEquipaje.addEventListener('change',mostrarPesoEquipajeFormulario);
 botonCotizarVuelo.addEventListener('click',funcionMostrarModalCotizacionVuelo);
-
+selecionOrigen.addEventListener('change',funcionNoElegirMismaCiudad);
