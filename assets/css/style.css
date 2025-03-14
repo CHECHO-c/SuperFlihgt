@@ -1,0 +1,209 @@
+
+body {
+    font-family: "Poppins", sans-serif ;
+    margin: 0;
+    padding: 0;
+  }
+  
+    @keyframes flotar{
+    0%{
+      transform: rotate(-35deg);
+    }
+
+
+    50%{
+      transform: rotate(35deg);
+    }
+
+    100%{
+      transform: rotate(-35deg);
+    }
+      
+   
+  }
+  @keyframes vibrar{
+    0%{
+      transform: translateX(2px);
+    }
+    25%{
+      transform: translateX(-2px);
+    }
+    50%{
+      transform: translateY(2px);
+    }
+    75%{
+      transform: translateX(0px);
+    }
+    100%{
+      transform: translateX(-2px);
+    }
+  }
+ 
+  .vibracion{
+    animation: vibrar 0.1s infinite;
+  }
+  header {
+    background-color:#6769a4;
+    padding: 10px 0;
+    margin-bottom: 2%;
+    color: aliceblue;
+    height: 7vh;
+    
+    
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+    justify-content: center; 
+  }
+  
+  nav ul a {
+    margin: 0 15px; 
+    text-decoration: none;
+    color: white;
+    font-family: "Poppins", sans-serif ;
+
+    
+  }
+  
+
+
+  
+.rowSaludo{
+  
+  text-align: center;
+}
+
+ 
+ 
+ 
+
+
+  .imagenTitulo{
+    
+    justify-self: center;
+    background-image: url("/assets/images/viajar.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 100px;
+    height: 100px;
+    margin: 0;  
+    animation: flotar 3s infinite;
+  }
+
+  .finalTitulo{
+    color: #6769a4;
+  }
+
+  .inicioTitulo{
+    color: #616161;
+  }
+
+  .colAmarillo{
+    color: rgb(218, 218, 46);
+  }
+  .colAzul{
+    color: blue;
+  }
+  .colRojo{
+    color: red;
+  }
+  .tituloFormulario{
+    color: #6769a4;
+  }
+  .colPresentacionTitulo{
+    padding-top: 7%;
+  }
+  .botonConoceMas{
+    background-color: #6769a4;
+    color: white;
+    margin-top: 1%;
+
+  }
+
+  .botonConoceMas:hover{
+    background-color: #6769a4;
+    color: white;
+  
+
+
+  }
+  .formularioViajes{
+    padding-top: 100px;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .form-select{
+    width: 100%;
+  }
+
+  footer{
+    padding-top: 500px;
+  }
+
+  .card.elegirViaje{
+    width: 70%;
+    border: #6769a4 solid 2px;
+    padding: 20px;
+  }
+
+  .eligeTuAsiento{
+    
+    display: flex;
+    justify-content: center;
+    
+    
+  
+    
+  }
+  .labelElijeTuAsiento{
+    padding-bottom: 2%;
+    
+  }
+
+  .labelTextoPesoEquipaje{
+    padding-bottom: 2%;
+  }
+
+  .labelElijeTuAsiento{
+    font-size: 20px;
+  }
+
+  .radioElegirAsiento{
+    padding-left: 7%;
+    padding-right: 7%;
+  }
+
+  .botonEnviar{
+    background-color: #6769a4;
+    color: white;
+   
+  }
+  
+  .botonEnviar:hover{
+    background-color: #6769a4;
+    color: white;
+    
+  }
+  .divbotonEnviar{
+    padding-top: 2%;
+    justify-self: end;
+  }
+  .txtTituloModal{
+    color: #6769a4;
+  }
+  .btnContinuarModal{
+    background-color: #6769a4;
+    color: white;
+  }
+  .btnContinuarModal:hover{
+    background-color: #6769a4;
+    color: white;
+  }

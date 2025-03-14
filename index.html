@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/assets/images/avion.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Viga&display=swap" rel="stylesheet">
+    
+    <title>SuperFlight</title>
+</head>
+<body>
+    <header>
+      
+        <nav>
+       
+        
+          </div> 
+          <ul>
+           
+            <a href="/index.html"><li>Inicio</li></a>
+            <a href=""><li>Vuelos</li></a>
+            <a href=""><li>Sobre Nosotros</li></a>
+             
+          </ul>
+        </nav>
+      </header>
+
+        <div class="rowSaludo">
+          <div class="col-12 colPresentacionTitulo">
+            <div class="imagenTitulo"></div>
+            <h1><span class="inicioTitulo">Bienvenido a</span> <span class="finalTitulo">SuperFlight</span></h1>
+            <h4>Descubre la maravillosa biodiversidad colombiana y disfruta de 
+              <span class="colAmarillo">Col</span><span class="colAzul">om</span><span class="colRojo">bia</span>
+            </h4>
+            <button type="button" class="btn botonConoceMas">Conoce mas</button>
+          </div>
+        </div>
+        
+        
+        
+            <div class="formularioViajes">
+              <form action="#" class="card elegirViaje">
+                <div class="row rowFormViajes">
+                  <span class="tituloFormulario"><h1>Cotiza tu vuelo  <i class="fa-solid fa-plane"></i></h1></span>
+
+
+                  <div class="col-6">
+                    <label for="selecionOrigen" class="form-label">¿Desde donde?</label>
+                    <select  id="selecionOrigen" class="form-select" required>
+                      <option value="Pereira">Pereira</option>
+                      <option value="Bucaramanga">Bucaramanga</option>
+                      <option value="Medellin">Medellin</option>
+                      <option value="Cartagena">Cartagena</option>
+                      <option value="San Andres">San Andres</option>
+                  </select>
+                  <br>
+                  
+                  <label for="cantiadPasajeros">Cuantos Pasajeros?</label>
+                  <input type="number" min="1" value="1" max="50" class="form-control" id="cantiadPasajeros" required>
+                  <br>
+
+
+
+                  
+                  
+                  
+                
+                </div>
+                  
+                  <div class ="col-6">
+                  <label for="selecionDestino" class="form-label">¿A donde?</label>
+                    <select  id="selecionDestino" class="form-select">
+                        <option value="Pereira">Pereira</option>
+                        <option value="Bucaramanga">Bucaramanga</option>
+                        <option value="Medellin">Medellin</option>
+                        <option value="Cartagena">Cartagena</option>
+                        <option value="San Andres">San Andres</option>
+                    </select>
+                    <br>
+                    <label for="pesoEquipaje" id="textoPesoEquipaje" class="labelTextoPesoEquipaje">Elije el peso aproximado   Peso: 5KG-10KG </label>
+                    <input type="range" min="0" max="5" step="1" value="0" class="form-range" id="pesoEquipaje">
+                    
+                  </div>
+  
+                </div>
+
+                <div class="row rowElegirTipoAsiento">
+                  <div class="col-12 colElegirTipoAsiento">
+                    <label for="divEligeTuAsiento" class="form-check-label labelElijeTuAsiento">Seleccione el tipo de Asiento</label>
+                  <div class="eligeTuAsiento" id="divEligeTuAsiento">
+                    <div class="form-check radioElegirAsiento" >
+                      <input class="form-check-input" type="radio"  name="elejirAsientos" checked="true"  value="Asiento Economico" id="economico">
+                      <label for="elegirAsiento" class="form-check-label">Asiento Economico</label>
+                    </div>
+                    <div class="form-chek radioElegirAsiento" >
+                      <input type="radio" class="form-check-input"  name="elejirAsientos" value="Asiento Ejecutivo" id="Ejecutivo" >
+                      <label for="elegirAsientoEjecutivo" class="form-check-label">Asiento Ejecutivo</label>
+                    </div>
+  
+                    <div class="form-check radioElegirAsiento" >
+                      <input type="radio" class="form-check-input"  name="elejirAsientos" value="Asiento Vip" id="VIP">
+                      <label for="elegirAsientoVip" class="form-check-label">Asiento Vip</label>
+                    </div>
+                    
+                  </div>
+                  <div class="divbotonEnviar">
+                    <button  type="button" class="btn botonEnviar" id="botonCotizarVuelo" data-bs-toggle="modal" data-bs-target="#modalMostrarCotizacion"
+                    >Cotizar Vuelo</button>
+                  </div>
+                  
+
+                  </div>
+                </div>
+                
+                  
+              </form>
+            </div>
+
+
+            <!-- Aca voy a poner el "modal" o aununcio para mostrar la "factura cotizada" xdxd -->
+            <div class="modal fade" id="modalMostrarCotizacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="textoModalCotizacionVueloLabel"> <span class="txtTituloModal">Confirma los datos</span></h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body" id="textoModalCotizacionVuelo">
+                    
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="botonCerrarModal">Cancelar</button>
+                    <button type="button" class="btn btn btnContinuarModal">Continuar</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          
+       
+      <footer>asdsasdasdad</footer>
+     
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+      <script src="/assets/js/interfaz.js"></script>
+    </body>
+</html>
