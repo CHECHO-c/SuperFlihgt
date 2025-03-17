@@ -133,57 +133,49 @@ function funcionNoElegirMismaCiudad(){
 
     if(selecionOrigen.value=="Pereira"){
         otpPereira.setAttribute('disabled','true');
-    }
-    else{
-
-        otpBucaramanga.removeAttribute('disabled')
-        otpMedellin.removeAttribute('disabled')
-        otpCartagena.removeAttribute('disabled')
-        otpSanAndres.removeAttribute('disabled')
-    }
-
-
-
-    
-     if(selecionOrigen.value=="Bucaramanga"){
-        otpBucaramanga.setAttribute('disabled','true');
-    }
-    else{
-        otpPereira.removeAttribute('disabled')
-        otpMedellin.removeAttribute('disabled')
-        otpCartagena.removeAttribute('disabled')
-        otpSanAndres.removeAttribute('disabled')
-    }
-    if(selecionOrigen.value=="Medellin"){
-        otpMedellin.setAttribute('disabled','true');
-    }
-    else{
-        otpPereira.removeAttribute('disabled')
-        otpBucaramanga.removeAttribute('disabled')
-        otpCartagena.removeAttribute('disabled')
-        otpSanAndres.removeAttribute('disabled')
-
-    }
-
-    if(selecionOrigen.value=="Cartagena"){
-        otpCartagena.setAttribute('disabled','true');
-    }
-    else{
-        otpPereira.removeAttribute('disabled')
-        otpBucaramanga.removeAttribute('disabled')
-        otpMedellin.removeAttribute('disabled')
-        otpSanAndres.removeAttribute('disabled')
-
-    }
-    if(selecionOrigen.value=="SanAndres"){
-        otpSanAndres.setAttribute('disabled','true');
-    }
-    else{
-        otpPereira.removeAttribute('disabled');
         otpBucaramanga.removeAttribute('disabled');
-        otpMedellin.removeAttribute('disabled');
         otpCartagena.removeAttribute('disabled');
+        otpMedellin.removeAttribute('disabled');
+        otpSanAndres.removeAttribute('disabled');
     }
+    else if(selecionOrigen.value=="Bucaramanga"){
+       otpBucaramanga.setAttribute('disabled','true');
+        otpPereira.removeAttribute('disabled');
+        otpCartagena.removeAttribute('disabled');
+        otpMedellin.removeAttribute('disabled');
+        otpSanAndres.removeAttribute('disabled');
+
+
+        
+    }
+    else if(selecionOrigen.value=="Medellin"){
+        otpMedellin.setAttribute('disabled','true');
+        
+        
+        otpPereira.removeAttribute('disabled');
+        otpCartagena.removeAttribute('disabled');
+        otpSanAndres.removeAttribute('disabled');
+        
+    }
+    else if(selecionOrigen.value=="Cartagena"){
+        otpCartagena.setAttribute('disabled','true');
+        
+        otpPereira.removeAttribute('disabled');
+        otpMedellin.removeAttribute('disabled');
+        otpSanAndres.removeAttribute('disabled');
+
+    }
+    else if(selecionOrigen.value=="SanAndres"){
+        otpSanAndres.setAttribute('disabled','true')
+
+        otpPereira.removeAttribute('disabled');
+        otpCartagena.removeAttribute('disabled');
+        otpMedellin.removeAttribute('disabled');
+        
+
+    }
+
+
    
     
 
